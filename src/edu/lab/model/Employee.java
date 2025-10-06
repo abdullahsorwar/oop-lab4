@@ -14,23 +14,30 @@ public class Employee implements Comparable<Employee> {
     @Override
     public int compareTo(Employee other){
         // TODO: compare by name case-insensitively
-        throw new UnsupportedOperationException("TODO");
+        return this.name.compareToIgnoreCase(other.name);
+        // throw new UnsupportedOperationException("TODO");
     }
 
     @Override
     public String toString(){
         // TODO: "Employee{id=ID, name='NAME'}"
-        throw new UnsupportedOperationException("TODO");
+        return "Employee{id=" + id + ", name='" + name + "'}";
+        // throw new UnsupportedOperationException("TODO");
     }
 
     @Override
     public boolean equals(Object o){
         // TODO: consistent with compareTo on name (case-insensitive)
-        throw new UnsupportedOperationException("TODO");
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return name.equalsIgnoreCase(employee.name);
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override
     public int hashCode(){
         // TODO: consistent with equals
-        throw new UnsupportedOperationException("TODO");
+        return Objects.hash(name.toLowerCase());
+        // throw new UnsupportedOperationException("TODO");
     }
 }

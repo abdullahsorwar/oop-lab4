@@ -8,14 +8,17 @@ public class Circle implements Shape {
 
     @Override public double area(){
         // TODO: Math.PI * r * r
-        throw new UnsupportedOperationException("TODO");
+        return Math.PI * radius * radius;
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override public double perimeter(){
         // TODO: 2 * Math.PI * r
-        throw new UnsupportedOperationException("TODO");
+        return 2 * Math.PI * radius;
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override public String toString(){
         // TODO: "Circle{r=.., area=.., perim=..}"
-        throw new UnsupportedOperationException("TODO");
+        return "Circle{r=" + radius + ", area=" + area() + ", perim=" + perimeter() + "}";
+        // throw new UnsupportedOperationException("TODO");
     }
 }

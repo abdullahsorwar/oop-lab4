@@ -9,14 +9,17 @@ public class Rectangle implements Shape {
 
     @Override public double area(){
         // TODO: w * h
-        throw new UnsupportedOperationException("TODO");
+        return width * height;
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override public double perimeter(){
         // TODO: 2*(w+h)
-        throw new UnsupportedOperationException("TODO");
+        return 2 * (width + height);
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override public String toString(){
         // TODO: "Rectangle{w=.., h=.., area=.., perim=..}"
-        throw new UnsupportedOperationException("TODO");
+        return "Rectangle{w=" + width + ", h=" + height + ", area=" + area() + ", perim=" + perimeter() + "}";
+        // throw new UnsupportedOperationException("TODO");
     }
 }

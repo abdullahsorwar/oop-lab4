@@ -5,11 +5,15 @@ public class CaseInsensitiveSearch implements Searchable {
     @Override
     public boolean search(String text, String key){
         // TODO: convert both to lower-case and use indexOf
-        throw new UnsupportedOperationException("TODO");
+        if (text == null || key == null) return false;
+        return text.toLowerCase().indexOf(key.toLowerCase()) != -1;
+        // throw new UnsupportedOperationException("TODO");
     }
     @Override
     public String replace(String text, String oldWord, String newWord){
         // TODO: implement a case-insensitive replace of all occurrences
-        throw new UnsupportedOperationException("TODO");
+        if (text == null || oldWord == null || newWord == null) return text;
+        return text.replaceAll("(?i)" + oldWord, newWord);
+        // throw new UnsupportedOperationException("TODO");
     }
 }
